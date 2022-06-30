@@ -4,12 +4,16 @@ const Item = ({ card }) => {
   const [showLogo, setShowLogo] = useState(true);
 
   const { name, img, options } = card;
+  const setFront = () => {
+    setShowLogo(true);
+  };
 
   return (
     <div
       className="card"
       onClick={() => {
         setShowLogo(!showLogo);
+        setTimeout(setFront, 3000);
       }}
     >
       {showLogo ? (
